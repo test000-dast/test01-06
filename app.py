@@ -1,9 +1,11 @@
 import streamlit as st
+
+# ✅ ต้องเป็นคำสั่งแรกสุดในไฟล์
+st.set_page_config(page_title="Multi-File Dashboard", page_icon="📊", layout="wide")
+
 import pandas as pd
 import altair as alt
 
-# ✅ ดูค่า query params ว่า mode=view จริงหรือไม่
-st.write("Query Params:", st.query_params)
 
 query_params = st.query_params
 mode = query_params.get("mode", [""])[0]  # ถ้าไม่มีให้เป็น ""
